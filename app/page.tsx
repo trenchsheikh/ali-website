@@ -1,7 +1,14 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
     <div className={styles.page}>
       {/* Navbar */}
@@ -11,11 +18,22 @@ export default function Home() {
             <div>SHARIFF <span className={styles.logoRed}>SUFI</span></div>
             <span className={styles.logoSmall}>FOUNDATION</span>
           </div>
-          <ul className={styles.navLinks}>
-            <li><a href="#about">About</a></li>
-            <li><a href="#mission">Mission</a></li>
-            <li><a href="#legal">Legal</a></li>
-            <li><a href="#contact">Contact</a></li>
+          
+          <button 
+            className={`${styles.hamburger} ${isMenuOpen ? styles.hamburgerActive : ""}`} 
+            onClick={toggleMenu}
+            aria-label="Toggle Menu"
+          >
+            <span className={styles.hamburgerBar}></span>
+            <span className={styles.hamburgerBar}></span>
+            <span className={styles.hamburgerBar}></span>
+          </button>
+
+          <ul className={`${styles.navLinks} ${isMenuOpen ? styles.navLinksActive : ""}`}>
+            <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About</a></li>
+            <li><a href="#mission" onClick={() => setIsMenuOpen(false)}>Mission</a></li>
+            <li><a href="#legal" onClick={() => setIsMenuOpen(false)}>Legal</a></li>
+            <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
           </ul>
           <a href="#contact" className="btn btn-primary">Support Us</a>
         </div>
