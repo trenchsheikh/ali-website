@@ -11,6 +11,31 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "NGO",
+            "name": "Shariff Sufi Foundation",
+            "alternateName": "Shariff Sufi Foundation CIO",
+            "url": "https://shariffsufifoundation.org",
+            "logo": "https://shariffsufifoundation.org/logo.png",
+            "description": "Shariff Sufi Foundation is a UK registered Charitable Incorporated Organisation (CIO) supporting young people up to the age of 25 in Camden.",
+            "areaServed": {
+              "@type": "AdministrativeArea",
+              "name": "London Borough of Camden"
+            },
+            "knowsAbout": ["Education", "Social Inclusion", "Youth Development"],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "info@shariffsufifoundation.org",
+              "contactType": "customer support"
+            }
+          }),
+        }}
+      />
       {/* Navbar */}
       <nav className={styles.navbar}>
         <div className={`container ${styles.navContainer}`}>
