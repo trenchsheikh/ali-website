@@ -65,30 +65,34 @@ export default function Home() {
       </nav>
 
       <main>
-        {/* Hero Section */}
+        {/* Hero Section - Split Layout */}
         <section className={styles.hero}>
-          <div className={styles.heroOverlay}></div>
-          <div className={styles.heroImage}>
-            <Image 
-              src="/hero.png" 
-              alt="Shariff Sufi Foundation Hero" 
-              fill 
-              style={{ objectFit: 'cover' }}
-              priority
-            />
-          </div>
-          <div className={`container ${styles.heroContent}`}>
-            <h1 className={styles.heroTitle}>
-              Shariff Sufi
-              <span className={styles.heroTitleSmall}>Foundation</span>
-            </h1>
-            <p className={styles.heroSubtitle}>
-              Shariff Sufi Foundation exists to advance education, promote social inclusion, 
-              and provide recreational opportunities for young people up to age 25.
-            </p>
-            <div className={styles.ctas}>
-              <a href="#about" className="btn btn-primary">Learn More</a>
-              <a href="#contact" className="btn btn-outline" style={{ color: 'white', borderColor: 'white', marginLeft: '20px' }}>Contact Us</a>
+          <div className={`container`}>
+            <div className={styles.heroGrid}>
+              <div className={styles.heroContent}>
+                <h1 className={styles.heroTitle}>
+                  Shariff Sufi
+                  <span className={styles.heroTitleSmall}>Foundation</span>
+                </h1>
+                <p className={styles.heroSubtitle}>
+                  Shariff Sufi Foundation exists to advance education, promote social inclusion, 
+                  and provide recreational opportunities for young people up to age 25.
+                </p>
+                <div className={styles.ctas}>
+                  <a href="#about" className="btn btn-primary">Learn More</a>
+                  <a href="#contact" className="btn btn-outline" style={{ marginLeft: '20px' }}>Contact Us</a>
+                </div>
+              </div>
+              <div className={styles.heroImageContainer}>
+                <div className={styles.heroDecoration}></div>
+                <Image 
+                  src="/hero.png" 
+                  alt="Shariff Sufi Foundation Work" 
+                  fill 
+                  style={{ objectFit: 'cover' }}
+                  priority
+                />
+              </div>
             </div>
           </div>
         </section>
