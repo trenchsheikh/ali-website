@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Script from "next/script";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -57,10 +58,11 @@ export default function Home() {
           <ul className={`${styles.navLinks} ${isMenuOpen ? styles.navLinksActive : ""}`}>
             <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About</a></li>
             <li><a href="#mission" onClick={() => setIsMenuOpen(false)}>Mission</a></li>
+            <li><a href="#donate" onClick={() => setIsMenuOpen(false)}>Donate</a></li>
             <li><a href="#legal" onClick={() => setIsMenuOpen(false)}>Legal</a></li>
             <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
           </ul>
-          <a href="#contact" className="btn btn-primary">Support Us</a>
+          <a href="#donate" className="btn btn-primary">Support Us</a>
         </div>
       </nav>
 
@@ -141,6 +143,35 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Donate & Gift Aid — Youform embed */}
+        <section id="donate" className={`section ${styles.donateSection}`}>
+          <div className="container">
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionLabel}>Donate</span>
+              <h2 className={styles.sectionTitle}>Support us & Gift Aid</h2>
+              <p className={styles.donateIntro}>
+                Your donation helps us advance education and opportunities for young people in Camden.
+                If you are a UK taxpayer, you can complete the Gift Aid section in the form below so we can
+                reclaim tax on your gift at no extra cost to you.
+              </p>
+            </div>
+            <div className={styles.donateEmbed}>
+              <div
+                data-youform-embed=""
+                data-form="9pyxnao2"
+                data-base-url="https://app.youform.com"
+                data-width="100%"
+                data-height="700"
+              />
+            </div>
+          </div>
+        </section>
+
+        <Script
+          src="https://app.youform.com/embed.js"
+          strategy="afterInteractive"
+        />
+
         {/* Legal & Footer Area */}
         <footer className={styles.footer}>
           <div className="container">
@@ -164,6 +195,7 @@ export default function Home() {
                 <ul className={styles.footerText}>
                   <li><a href="#about">About</a></li>
                   <li><a href="#mission">Mission</a></li>
+                  <li><a href="#donate">Donate</a></li>
                   <li><a href="#legal">Legal</a></li>
                 </ul>
               </div>

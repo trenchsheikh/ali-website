@@ -224,6 +224,32 @@
   border-left: 5px solid var(--primary);
 }
 
+/* Donate — Youform embed */
+.donateSection {
+  background-color: var(--white);
+}
+
+.donateIntro {
+  margin-top: 24px;
+  max-width: 720px;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.donateEmbed {
+  margin-top: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 700px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg-offset);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+}
+
 /* Legal & Contact */
 .footer {
   background-color: var(--secondary);
