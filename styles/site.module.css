@@ -1,3 +1,19 @@
+.logoLink {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  line-height: inherit;
+}
+
+.logoLink:hover {
+  opacity: 0.85;
+}
+
+.navLinks a.navLinkActive {
+  color: var(--primary);
+}
+
 .navbar {
   height: var(--nav-height);
   position: fixed;
@@ -43,6 +59,7 @@
 .navLinks {
   display: flex;
   gap: 40px;
+  align-items: center;
 }
 
 .navLinks a {
@@ -88,7 +105,60 @@
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Hero Section Redesign - Split Layout */
+/* Inner pages — breadcrumb + title */
+.pageHeader {
+  padding: calc(var(--nav-height) + 36px) 5% 48px;
+  background: linear-gradient(180deg, var(--bg-offset) 0%, var(--white) 100%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.breadcrumb {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-family: var(--font-body);
+}
+
+.breadcrumb a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary);
+}
+
+.breadcrumbSep {
+  opacity: 0.45;
+  user-select: none;
+}
+
+.breadcrumbCurrent {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.pageTitle {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  max-width: 900px;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.pageHeader .sectionLabel {
+  margin-bottom: 12px;
+}
+
+.innerMain {
+  flex: 1;
+  min-height: 40vh;
+}
+
+/* Hero Section - Split Layout */
 .hero {
   position: relative;
   min-height: 80vh;
@@ -184,6 +254,10 @@
 }
 
 /* About Section */
+.aboutSection {
+  background-color: var(--white);
+}
+
 .aboutGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -194,6 +268,17 @@
 .aboutText {
   font-size: 1.2rem;
   color: var(--text-muted);
+}
+
+.aboutProse {
+  max-width: 720px;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.aboutProse p + p {
+  margin-top: 1.25rem;
 }
 
 .aboutHighlight {
@@ -224,6 +309,13 @@
   border-left: 5px solid var(--primary);
 }
 
+.missionLead {
+  margin-top: 24px;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
 /* Donate — Youform embed */
 .donateSection {
   background-color: var(--white);
@@ -250,11 +342,52 @@
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
 }
 
+/* Simple content pages */
+.simpleSection {
+  background-color: var(--white);
+}
+
+.simpleCard {
+  max-width: 640px;
+  padding: 40px;
+  background: var(--bg-offset);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.simpleCard p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.simpleCard a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.simpleCard a:hover {
+  text-decoration: underline;
+}
+
+.legalList {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.legalList li {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
 /* Legal & Contact */
 .footer {
   background-color: var(--secondary);
   color: var(--white);
   padding: 80px 5%;
+  margin-top: auto;
 }
 
 .footerGrid {
@@ -275,15 +408,31 @@
   margin-bottom: 10px;
 }
 
+.footerText li {
+  margin-bottom: 8px;
+}
+
+.footerText a:hover {
+  color: var(--white);
+  opacity: 1;
+}
+
 .footerContact {
   font-size: 1.1rem;
   font-weight: 600;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 992px) {
   .aboutGrid { grid-template-columns: 1fr; gap: 40px; }
   .footerGrid { grid-template-columns: 1fr; }
   .sectionTitle { font-size: 2.5rem; }
+  .pageTitle { font-size: 2.25rem; }
 }
 
 @media (max-width: 768px) {
@@ -354,6 +503,11 @@
   .footerGrid {
     gap: 40px;
   }
+
+  .pageHeader {
+    padding-top: calc(var(--nav-height) + 28px);
+    padding-bottom: 36px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -363,5 +517,9 @@
   
   .sectionTitle {
     font-size: 2rem;
+  }
+
+  .pageTitle {
+    font-size: 1.85rem;
   }
 }

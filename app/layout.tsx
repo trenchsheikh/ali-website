@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://shariffsufifoundation.org"),
   title: "Shariff Sufi Foundation | Empowering Youth in Camden",
-  description: "Shariff Sufi Foundation is a UK registered CIO supporting young people up to 25. Advancing education, social inclusion, and wellbeing in Camden.",
+  description:
+    "Shariff Sufi Foundation is a UK registered CIO supporting young people up to 25. Advancing education, social inclusion, and wellbeing in Camden.",
   openGraph: {
     title: "Shariff Sufi Foundation | Empowering Youth in Camden",
     description: "Supporting young people up to the age of 25 in and around the London Borough of Camden through education and inclusive activities.",
