@@ -6,7 +6,7 @@ import styles from "@/styles/site.module.css";
 export const metadata: Metadata = {
   title: "Shariff Sufi Foundation | Empowering Youth in Camden",
   description:
-    "Shariff Sufi Foundation is a UK registered CIO supporting young people up to 25. Advancing education, social inclusion, and wellbeing in Camden.",
+    "UK charity in Camden supporting young people aged 16 to 25 with confidence, life skills, and opportunities, named in honour of Shariff Sufi and open to all.",
 };
 
 export default function HomePage() {
@@ -23,7 +23,7 @@ export default function HomePage() {
             url: "https://shariffsufifoundation.org",
             logo: "https://shariffsufifoundation.org/logo.png",
             description:
-              "Shariff Sufi Foundation is a UK registered Charitable Incorporated Organisation (CIO) supporting young people up to the age of 25 in Camden.",
+              "Shariff Sufi Foundation is a UK registered Charitable Incorporated Organisation (CIO) supporting young people aged 16 to 25 in Camden, building confidence, skills, and opportunity in honour of Shariff Sufi.",
             areaServed: {
               "@type": "AdministrativeArea",
               name: "London Borough of Camden",
@@ -47,8 +47,9 @@ export default function HomePage() {
                 <span className={styles.heroTitleSmall}>Foundation</span>
               </h1>
               <p className={styles.heroSubtitle}>
-                Shariff Sufi Foundation exists to advance education, promote social inclusion, and
-                provide recreational opportunities for young people up to age 25.
+                A Camden charity named in honour of Shariff Sufi, supporting young people aged 16 to
+                25 to build confidence, develop life skills, and access opportunities in education,
+                training, and employment, with positivity and welcome for all.
               </p>
               <div className={styles.ctas}>
                 <Link href="/about" className="btn btn-primary">

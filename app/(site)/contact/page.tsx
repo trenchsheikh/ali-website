@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
+import { INSTAGRAM_LAUNCH_POST_URL } from "@/lib/site";
 import styles from "@/styles/site.module.css";
 
 export const metadata: Metadata = {
@@ -23,6 +24,18 @@ export default function ContactPage() {
             <p>
               To support our work with a donation, visit our{" "}
               <Link href="/donate">Donate & Gift Aid</Link> page.
+            </p>
+            <p>
+              We are also on{" "}
+              <a
+                href={INSTAGRAM_LAUNCH_POST_URL}
+                className={styles.externalLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+              . Follow and share to help spread the word.
             </p>
           </div>
         </div>

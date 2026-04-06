@@ -202,7 +202,7 @@
   margin-bottom: 40px;
   font-weight: 400;
   color: var(--text-muted);
-  max-width: 500px;
+  max-width: 560px;
 }
 
 .heroImageContainer {
@@ -281,6 +281,54 @@
   margin-top: 1.25rem;
 }
 
+.proseHeading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+  color: var(--secondary);
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+
+.aboutProse .proseHeading:first-child {
+  margin-top: 0;
+}
+
+.externalLink {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.externalLink:hover {
+  color: var(--primary-dark);
+}
+
+.instagramCallout {
+  margin-top: 3rem;
+  padding: 1.75rem 1.5rem;
+  background: var(--white);
+  border-left: 4px solid var(--primary);
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  max-width: 720px;
+}
+
+.instagramCallout p {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.instagramCallout p:last-child {
+  margin-bottom: 0;
+}
+
 .aboutHighlight {
   color: var(--secondary);
   font-weight: 600;
@@ -309,8 +357,14 @@
   border-left: 5px solid var(--primary);
 }
 
+.missionBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
 .missionLead {
-  margin-top: 24px;
+  margin: 0;
   font-size: 1.2rem;
   color: var(--text-muted);
   line-height: 1.65;
